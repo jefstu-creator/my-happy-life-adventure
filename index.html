@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4cf">
+  <title>My Happy Life Adventure</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky-decor" aria-hidden="true"><span>☁️</span><span>☁️</span><span>🌈</span><span>⭐</span></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon" aria-hidden="true">🏡</span><div><h1>My Happy Life Adventure</h1><p>Little choices. Big smiles!</p></div></div>
+    <div class="score-pill" aria-live="polite"><span aria-hidden="true">⭐</span><span id="star-count">0</span><small>stars</small></div>
+    <button class="sound-button" id="reset-button" type="button" title="Start again">🔄 <span>Start again</span></button>
+  </header>
+
+  <main>
+    <section class="welcome panel" id="welcome-screen">
+      <div class="welcome-art" aria-hidden="true">
+        <div class="sun">☀️</div><div class="cloud cloud-a">☁️</div><div class="cloud cloud-b">☁️</div>
+        <div class="rainbow">🌈</div><div class="house">🏡</div><div class="tree">🌳</div>
+      </div>
+      <div class="welcome-copy">
+        <span class="eyebrow">YOUR ADVENTURE STARTS HERE</span>
+        <h2>Let’s make a happy little world!</h2>
+        <p>Choose what to do, collect stars, and add lovely things to your town. There are no wrong answers.</p>
+        <label class="name-label" for="player-name">What shall we call you?</label>
+        <input id="player-name" maxlength="14" placeholder="Your name (optional)" autocomplete="off">
+        <button class="big-button primary" id="start-button" type="button">Let’s play! <span aria-hidden="true">🚀</span></button>
+      </div>
+    </section>
+
+    <section id="game-screen" class="hidden">
+      <div class="progress-row panel">
+        <div><span class="eyebrow">YOUR LITTLE JOURNEY</span><h2 id="greeting">Hello, little explorer!</h2><p id="step-caption">Pick a picture to begin.</p></div>
+        <div class="progress-bubbles" aria-label="Adventure progress"><span class="bubble active">1</span><i></i><span class="bubble">2</span><i></i><span class="bubble">3</span><i></i><span class="bubble">4</span></div>
+      </div>
+
+      <section class="scene panel" aria-label="Your town">
+        <div class="scene-sky"><span class="scene-sun">☀️</span><span class="scene-cloud cloud-one">☁️</span><span class="scene-cloud cloud-two">☁️</span></div>
+        <div class="scene-hill hill-back"></div><div class="scene-hill hill-front"></div>
+        <div class="town-items" id="town-items"><span class="town-house">🏡</span><span>🌳</span><span>🌷</span></div>
+        <div class="scene-path"></div>
+        <div class="scene-character" id="scene-character">🧒</div>
+        <div class="scene-sign" id="scene-sign">Welcome to your town!</div>
+      </section>
+
+      <section class="choice-area panel" id="choice-area">
+        <div class="section-heading"><div><span class="eyebrow" id="choice-eyebrow">ROUND 1</span><h2 id="choice-title">What would you like to do?</h2><p id="choice-help">Tap a big picture.</p></div><span class="helper-face" aria-hidden="true">😊</span></div>
+        <div class="choices" id="choices"></div>
+      </section>
+
+      <section class="reward panel hidden" id="reward-panel" aria-live="polite">
+        <div class="reward-star" aria-hidden="true">🌟</div><div><h2 id="reward-title">Well done!</h2><p id="reward-message">You earned a star!</p></div>
+        <button class="big-button primary" id="next-button" type="button">Next! <span aria-hidden="true">➡️</span></button>
+      </section>
+    </section>
+
+    <section class="finish panel hidden" id="finish-screen">
+      <div class="finish-art" aria-hidden="true">🎉 🏡 🌈 🎈</div>
+      <span class="eyebrow">ADVENTURE COMPLETE</span>
+      <h2 id="finish-title">You made a happy town!</h2>
+      <p id="finish-message">You made kind choices and collected stars. Amazing work!</p>
+      <div class="finish-stars" id="finish-stars">⭐⭐⭐⭐</div>
+      <button class="big-button primary" id="play-again-button" type="button">Play again! <span aria-hidden="true">🎮</span></button>
+    </section>
+  </main>
+
+  <footer><span>🌼 Made for little explorers</span><span>Play with a grown-up nearby.</span></footer>
+  <div class="celebration hidden" id="celebration" aria-hidden="true">⭐</div>
+  <script src="game.js"></script>
+</body>
+</html>
